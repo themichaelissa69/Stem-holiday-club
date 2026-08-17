@@ -1,0 +1,884 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #fffdf5;
+
+    color: #111111;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    height: 75px;
+
+    background: #d4af37;
+
+    border-bottom: 3px solid #111111;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.logo {
+
+    width: 50px;
+
+    height: 50px;
+
+    background: #111111;
+
+    color: #d4af37;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.brand h1 {
+
+    margin: 0;
+
+    font-size: 20px;
+}
+
+
+.brand p {
+
+    margin: 4px 0 0;
+
+    font-size: 12px;
+}
+
+
+.menu-button {
+
+    display: none;
+
+    background: #111111;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px;
+
+    border-radius: 6px;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.layout {
+
+    display: flex;
+
+    min-height:
+        calc(100vh - 75px);
+}
+
+
+aside {
+
+    width: 230px;
+
+    background: #111111;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.nav-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 7px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.nav-button:hover,
+.nav-button.active {
+
+    background: #d4af37;
+
+    color: #111111;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    flex: 1;
+
+    padding: 30px;
+
+    max-width: 1500px;
+
+    width: 100%;
+
+    margin: auto;
+}
+
+
+.page {
+
+    display: none;
+}
+
+
+.page.active {
+
+    display: block;
+}
+
+
+.page-header {
+
+    margin-bottom: 25px;
+}
+
+
+.page-header span {
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #8b6c00;
+}
+
+
+.page-header h2 {
+
+    margin: 5px 0;
+
+    font-size: 30px;
+}
+
+
+.page-header p {
+
+    margin: 0;
+
+    color: #666666;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.stat {
+
+    background: white;
+
+    border: 1px solid #e1d49c;
+
+    border-top: 5px solid #d4af37;
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+
+.stat p {
+
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 13px;
+}
+
+
+.stat h3 {
+
+    margin: 8px 0 0;
+
+    font-size: 30px;
+}
+
+
+.dashboard-box {
+
+    background: white;
+
+    border: 1px solid #e1d49c;
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+
+.activity-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eeeeee;
+
+    padding: 14px 0;
+}
+
+
+.activity-row:last-child {
+
+    border-bottom: none;
+}
+
+
+.activity-row button {
+
+    background: #d4af37;
+
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   REGISTRATION FORM
+========================= */
+
+.registration-card {
+
+    background: white;
+
+    border: 1px solid #e1d49c;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.4fr 1.7fr 1fr;
+
+    gap: 13px;
+}
+
+
+.field label {
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+
+.field input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #999999;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+
+.field input:focus {
+
+    outline: 2px solid #d4af37;
+
+    border-color: #d4af37;
+}
+
+
+.form-buttons {
+
+    margin-top: 15px;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.gold-button {
+
+    background: #d4af37;
+
+    color: #111111;
+
+    border: 2px solid #111111;
+
+    padding: 11px 18px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.clear-button {
+
+    background: #eeeeee;
+
+    color: #111111;
+
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+
+    width: 100%;
+
+    max-width: 400px;
+
+    padding: 11px;
+
+    border: 1px solid #999999;
+
+    border-radius: 6px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: white;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
+}
+
+
+table {
+
+    width: 100%;
+
+    min-width: 950px;
+
+    border-collapse: collapse;
+}
+
+
+thead {
+
+    background: #111111;
+
+    color: white;
+}
+
+
+th {
+
+    padding: 13px;
+
+    font-size: 11px;
+
+    text-align: left;
+}
+
+
+td {
+
+    padding: 11px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 13px;
+}
+
+
+tbody tr:hover {
+
+    background: #fff8df;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+.status-in {
+
+    background: #d4af37;
+
+    color: #111111;
+}
+
+
+.status-out {
+
+    background: #111111;
+
+    color: white;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-button {
+
+    border: none;
+
+    padding: 7px 9px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin: 2px;
+}
+
+
+.edit-button {
+
+    background: #d4af37;
+
+    color: #111111;
+}
+
+
+.signout-button {
+
+    background: #111111;
+
+    color: white;
+}
+
+
+.delete-button {
+
+    background: #eeeeee;
+
+    color: #111111;
+}
+
+
+/* =========================
+   NOTIFICATION
+========================= */
+
+.notification {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    right: 20px;
+
+    background: #111111;
+
+    color: white;
+
+    padding: 13px 18px;
+
+    border-radius: 7px;
+
+    display: none;
+
+    z-index: 500;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .form-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .header {
+
+        height: 68px;
+    }
+
+    .brand h1 {
+
+        font-size: 15px;
+    }
+
+    .brand p {
+
+        font-size: 10px;
+    }
+
+    .menu-button {
+
+        display: block;
+    }
+
+    aside {
+
+        position: fixed;
+
+        left: -240px;
+
+        top: 68px;
+
+        bottom: 0;
+
+        z-index: 90;
+
+        transition: 0.25s;
+    }
+
+    aside.open {
+
+        left: 0;
+    }
+
+    main {
+
+        padding: 18px;
+    }
+
+    .stats {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .stat {
+
+        padding: 14px;
+    }
+
+    .stat h3 {
+
+        font-size: 24px;
+    }
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h2 {
+
+        font-size: 25px;
+    }
+}
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+.login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #f5e6a8);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    border-top: 6px solid #d4af37;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.login-logo {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111111;
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.login-label {
+    color: #8a6d00;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.login-card h1 {
+    margin: 8px 0;
+    color: #111111;
+}
+
+.login-card p {
+    color: #666666;
+}
+
+.login-card label {
+    display: block;
+    text-align: left;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.login-card button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 13px;
+    border: 2px solid #111111;
+    border-radius: 7px;
+    background: #d4af37;
+    color: #111111;
+    font-weight: bold;
+}
+
+#loginMessage {
+    min-height: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#mainApp {
+    display: none;
+}
+/* DELETE CONFIRMATION MODAL */
+
+.delete-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.delete-modal-box {
+    width: 100%;
+    max-width: 420px;
+
+    background: #ffffff;
+    border-radius: 14px;
+
+    padding: 25px;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.delete-modal-box h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    color: #111111;
+}
+
+.delete-modal-box p {
+    margin: 0 0 25px;
+    font-size: 16px;
+    color: #444444;
+    line-height: 1.5;
+}
+
+.delete-modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.delete-modal-buttons button {
+    flex: 1;
+    min-height: 48px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#cancelDelete {
+    background: #dddddd;
+    color: #111111;
+}
+
+#confirmDelete {
+    background: #b00000;
+    color: #ffffff;
+}
